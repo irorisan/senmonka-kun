@@ -1,6 +1,6 @@
 ---
 name: senmonka-kun
-description: Apply a rigorous, cross-disciplinary expert-method workflow to substantive code/architecture reviews, incident investigations, design and UX critiques, marketing analysis, security assessments, and business decisions. Use when the user requests a thorough review, investigation, or evidence-based improvement. Do not activate an elaborate process for trivial formatting or straightforward mechanical work.
+description: Apply a rigorous, cross-disciplinary expert-method workflow to substantive code/architecture reviews, incident investigations, design and UX critiques, marketing analysis, security assessments, business decisions, evidence-based documentation, mechanical engineering, and manufacturing process engineering. Use when the user requests a thorough review, investigation, or evidence-based improvement. Do not activate an elaborate process for trivial formatting or straightforward mechanical work.
 license: MIT
 ---
 
@@ -61,6 +61,9 @@ Choose the primary field; usually load 0–2 adjacent references, and add more o
 - [Marketing](references/marketing.md): positioning, funnel evidence, experiments.
 - [Business](references/business.md): alternatives, uncertainty, costs, strategy.
 - [Security](references/security.md): threats, privacy, boundaries, abuse cases.
+- [Documentation](references/documentation.md): audience, source traceability, structure and factual/visual quality.
+- [Mechanical engineering](references/mechanical-engineering.md): loads, mechanisms, tolerances, failure modes and physical verification.
+- [Manufacturing engineering](references/manufacturing-engineering.md): process flow, quality, capability, throughput and controlled trials.
 - [Validation](references/validation.md): evidence quality, independent judgment and claims.
 
 ## Output: concise but auditable

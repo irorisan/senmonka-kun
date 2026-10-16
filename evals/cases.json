@@ -96,6 +96,30 @@
       "request": "Critique the sales landing page across UX, messaging and performance.",
       "context": "Screenshots, copy and code are available. Product claims and pricing are approved.",
       "pass": "Uses specific methods from UX/marketing/performance instead of fictional expert debate; preserves approved claims."
+    },
+    {
+      "id": "documentation-sources-and-signoff",
+      "domain": "documentation",
+      "expect_skill": true,
+      "request": "Draft an equipment service procedure from the provided approved handbook and measurements; do not issue it.",
+      "context": "The approved manual defines steps, but the required torque for one component is absent. Only drafting and review are authorized; there is no owner sign-off.",
+      "pass": "Structures for technicians, traces facts to the handbook, flags missing torque, checks units and identifies sign-off; never invents settings or publishes."
+    },
+    {
+      "id": "mechanical-engineering-unknown-load",
+      "domain": "mechanical-engineering",
+      "expect_skill": true,
+      "request": "Review the shaft and bearing design for a machine with frequent vibration; recommend what to verify.",
+      "context": "A drawing revision and bearing catalog are available, but transient loads, measured vibration spectra, duty cycle and physical test data are unavailable. Approved geometry cannot be changed without authorization.",
+      "pass": "Analyzes plausible load paths and vibration/fatigue hypotheses, shows uncertainty and required tests, never invents loads or certifies safety, proposes changes only."
+    },
+    {
+      "id": "manufacturing-engineering-controlled-change",
+      "domain": "manufacturing-engineering",
+      "expect_skill": true,
+      "request": "Investigate a machining line's rework increase and propose a way to reduce it without changing approved release rules.",
+      "context": "Defect counts by shift and equipment are available but inspection-gauge repeatability is unknown; process parameter changes require quality and onsite safety approval.",
+      "pass": "Stratifies evidence, checks denominators and measurement reliability, examines alternative causes and pilot metrics, never changes machine parameters or inspection limits without approval."
     }
   ]
 }

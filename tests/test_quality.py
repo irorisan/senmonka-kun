@@ -27,9 +27,10 @@ class EvaluationTest(unittest.TestCase):
     def test_valid_case_coverage(self):
         cases = json.loads((ROOT / "evals" / "cases.json").read_text("utf-8"))
         ids = REPORT.load_cases(ROOT / "evals" / "cases.json")
-        self.assertGreaterEqual(len(ids), 10)
+        self.assertGreaterEqual(len(ids), 15)
         self.assertTrue({"engineering", "design", "ux", "marketing", "business",
-                         "security", "general"}.issubset({c["domain"] for c in cases["cases"]}))
+                         "security", "documentation", "mechanical-engineering",
+                         "manufacturing-engineering", "general"}.issubset({c["domain"] for c in cases["cases"]}))
         self.assertTrue(all(isinstance(c.get("expect_skill"), bool)
                             and c.get("request") and c.get("context") and c.get("pass")
                             for c in cases["cases"]))
@@ -82,6 +83,8 @@ class PackagingTest(unittest.TestCase):
                 self.assertEqual(z.namelist(), names)
                 self.assertTrue(all(n.startswith("senmonka-kun/") for n in names))
                 self.assertIn(b"name: senmonka-kun", z.read("senmonka-kun/SKILL.md"))
+                for domain in ("documentation", "mechanical-engineering", "manufacturing-engineering"):
+                    self.assertIn(f"senmonka-kun/references/{domain}.md", names)
 
 
 if __name__ == "__main__":

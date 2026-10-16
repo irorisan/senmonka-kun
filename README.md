@@ -4,7 +4,7 @@
 
 [日本語](README.ja.md) | English
 
-Senmonka-kun helps AI agents tackle ambiguous, consequential work in **engineering, design, UX, marketing, business strategy, and security**. Inspired by the ideas of **Altitude** (work toward the outcome), **Depth** (use genuine expert methods), and **Range** (borrow useful techniques across disciplines), it adds independent **validation** and explicit **decision boundaries**.
+Senmonka-kun helps AI agents tackle ambiguous, consequential work in **software engineering, design, UX, marketing, business strategy, security, documentation, mechanical engineering, and manufacturing engineering**. Inspired by the ideas of **Altitude** (work toward the outcome), **Depth** (use genuine expert methods), and **Range** (borrow useful techniques across disciplines), it adds independent **validation** and explicit **decision boundaries**.
 
 It is a reusable process skill, not a role-playing prompt, autonomous decision-maker, or replacement for domain-specific policies.
 
@@ -52,7 +52,7 @@ Review this landing page using actual UX, design, and marketing methods.
 First clarify the success criterion; distinguish measured findings from assumptions.
 ~~~
 
-For examples across disciplines, see [examples/](examples/) and the [Japanese guide](README.ja.md).
+For examples across disciplines—including [documents](examples/documentation-creation.md), [mechanical engineering](examples/mechanical-engineering-review.md), and [manufacturing engineering](examples/manufacturing-engineering-review.md)—see [examples/](examples/) and the [Japanese guide](README.ja.md).
 
 ## Architecture
 
@@ -66,6 +66,9 @@ skills/senmonka-kun/
     ├── marketing.md
     ├── business.md
     ├── security.md
+    ├── documentation.md
+    ├── mechanical-engineering.md
+    ├── manufacturing-engineering.md
     └── validation.md
 ~~~
 
@@ -85,7 +88,7 @@ These checks validate structure and key rules; they cannot prove that a given AI
 
 A passing static check is **not evidence that the skill improves AI behavior**.
 Use the [paired evaluation protocol](docs/evaluation.md) and
-[12 cross-domain cases](evals/cases.json) to compare controlled baseline and skill-assisted runs.
+[15 cross-domain cases](evals/cases.json) to compare controlled baseline and skill-assisted runs.
 The [offline report](tools/eval_report.py) detects regression on critical decision, evidence, and scope constraints.
 
 For Codex, Claude Code, Claude chat, and ChatGPT chat, see the
