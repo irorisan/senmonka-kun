@@ -53,7 +53,7 @@ A deeper mode increases *rigor*, never scope or permission. When the user's requ
 
 ## Load relevant references only
 
-Choose the primary field; load 0–2 adjacent references only if useful.
+Choose the primary field; usually load 0–2 adjacent references, and add more only when they materially improve the decision.
 
 - [Engineering](references/engineering.md): code paths, debugging, regression, performance.
 - [Design](references/design.md): hierarchy, typography, visual coherence.
