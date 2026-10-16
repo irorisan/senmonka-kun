@@ -81,6 +81,22 @@ python3 -m unittest discover -s tests -v
 
 These checks validate structure and key rules; they cannot prove that a given AI agent will follow instructions. Actual outcomes require scenario testing and independent evidence. See [tests/scenarios.md](tests/scenarios.md).
 
+## Testing effectiveness and using other agents
+
+A passing static check is **not evidence that the skill improves AI behavior**.
+Use the [paired evaluation protocol](docs/evaluation.md) and
+[12 cross-domain cases](evals/cases.json) to compare controlled baseline and skill-assisted runs.
+The [offline report](tools/eval_report.py) detects regression on critical decision, evidence, and scope constraints.
+
+For Codex, Claude Code, Claude chat, and ChatGPT chat, see the
+[cross-platform setup guide](docs/integrations.md). A reproducible Claude chat ZIP can be built with:
+
+~~~bash
+python3 tools/package_skill.py
+~~~
+
+For ChatGPT project fallback instructions see [adapters/chatgpt-project-instructions.md](adapters/chatgpt-project-instructions.md).
+
 ## Source, license, and boundaries
 
 Conceptual inspiration: Felix Rieseberg, [How to Be More Ambitious: A Tutorial for Humans with Models](https://felixrieseberg.com/how-to-be-more-ambitious-a-tutorial-for-humans-with-models/). This repository is an independent implementation and is not affiliated with the author or AI vendors.

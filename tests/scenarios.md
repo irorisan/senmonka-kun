@@ -1,5 +1,7 @@
 # Behavioral acceptance scenarios
 
+This is a small manual smoke-test list. For a controlled, paired cross-domain benchmark and critical-gate criteria, use [evals/cases.json](../evals/cases.json) and [docs/evaluation.md](../docs/evaluation.md).
+
 Static tests only verify skill packaging and required instructions. Run these scenarios manually with each target agent and grade the **actual behavior**, not how convincing the explanation sounds.
 
 ## Scenario 1 — Approved decision conflict

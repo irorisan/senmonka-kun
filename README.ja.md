@@ -69,6 +69,23 @@ SKILL.mdだけでなく references/ も一緒に配置してください。自�
 
 [コードレビュー](examples/code-review.md) / [デザイン](examples/design-review.md) / [UX](examples/ux-review.md) / [マーケティング](examples/marketing-analysis.md)
 
+## 効果の検証・各環境への導入
+
+スキルが「使える」ことと、スキルによって「成果が改善する」ことは別です。
+新しく追加した[効果測定プロトコル](docs/evaluation.md)では、
+[12の分野横断ケース](evals/cases.json)でスキルなし／ありを比較し、
+承認境界・証拠の正確性・スコープ違反の回帰を必須条件として評価します。
+
+[4環境での導入ガイド](docs/integrations.md)で、Codex・Claude Code・Claude Chat・ChatGPT Chatの手順と制限を整理しています。ChatGPTでネイティブスキルが利用できない場合のための[プロジェクト指示テンプレート](adapters/chatgpt-project-instructions.md)も用意しました。
+
+Claudeチャット向けのZIPは次で作成できます。
+
+~~~bash
+python3 tools/package_skill.py
+~~~
+
+静的テストは内部形式を検査しますが、実際のAIの判断品質や導入時の自動呼び出しまで保証するものではありません。
+
 ## 検証・ライセンス
 
 ~~~bash

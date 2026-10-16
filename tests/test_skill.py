@@ -39,7 +39,7 @@ class SkillPackageTest(unittest.TestCase):
         self.assertIn(MANDATORY_RULE, self.content)
         self.assertIn(MANDATORY_RULE, (ROOT / "README.ja.md").read_text(encoding="utf-8"))
         self.assertIn("without explicit authorization", self.content)
-        self.assertIn("merging; publishing; deploying", self.content)
+        self.assertIn("do not merge, publish, deploy", self.content.lower())
 
     def test_reference_files_and_links(self):
         for name in REFERENCES:
@@ -60,7 +60,7 @@ class SkillPackageTest(unittest.TestCase):
     def test_principles_and_modes(self):
         for term in (
             "Altitude", "Depth", "Range", "Validation",
-            "Light", "Standard", "Deep", "Never claim an unrun check passed",
+            "Light", "Standard", "Deep", "Never claim a tool, test, review",
         ):
             self.assertIn(term.lower(), self.content.lower())
 
