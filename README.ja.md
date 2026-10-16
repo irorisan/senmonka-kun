@@ -4,7 +4,7 @@
 
 [English](README.md) | 日本語
 
-エンジニアリング、デザイン、UX、マーケティング、事業戦略、セキュリティなどに共通して利用できます。特定のWebサイト・リポジトリ・AIモデルには依存しません。
+ソフトウェアエンジニアリング、デザイン、UX、マーケティング、事業戦略、セキュリティ、資料作成、機械系エンジニアリング、製造業エンジニアリングなどに共通して利用できます。特定のWebサイト・リポジトリ・AIモデルには依存しません。
 
 ## 最優先ルール：既存の意思決定を尊重する
 
@@ -41,6 +41,9 @@ Deepでも、依頼されていない新機能や資料を無制限に増やす�
 | Marketing | 顧客セグメント、ファネル、訴求の根拠、実験計画 |
 | Business | 前提分析、選択肢比較、コスト、リスク、意思決定 |
 | Security | 攻撃面・脅威分析、最小権限、データ保護、悪用経路 |
+| Documentation（資料作成） | 読者と目的の定義、資料・数値の出典確認、構成、図表の検証、校閲と版管理 |
+| Mechanical Engineering（機械系） | 荷重・強度・機構・公差・材料・故障モードの検討、計算と実機検証 |
+| Manufacturing Engineering（製造業） | 工程分析、品質管理、タクト・サイクルタイム、測定の信頼性、改善試行と効果検証 |
 
 細かな方法は必要な分野の references/ のみ読み込みます。
 
@@ -67,13 +70,13 @@ SKILL.mdだけでなく references/ も一緒に配置してください。自�
 仕様変更が必要なら実装せずに提案して。
 ~~~
 
-[コードレビュー](examples/code-review.md) / [デザイン](examples/design-review.md) / [UX](examples/ux-review.md) / [マーケティング](examples/marketing-analysis.md)
+[コードレビュー](examples/code-review.md) / [デザイン](examples/design-review.md) / [UX](examples/ux-review.md) / [マーケティング](examples/marketing-analysis.md) / [資料作成](examples/documentation-creation.md) / [機械系](examples/mechanical-engineering-review.md) / [製造業](examples/manufacturing-engineering-review.md)
 
 ## 効果の検証・各環境への導入
 
 スキルが「使える」ことと、スキルによって「成果が改善する」ことは別です。
 新しく追加した[効果測定プロトコル](docs/evaluation.md)では、
-[12の分野横断ケース](evals/cases.json)でスキルなし／ありを比較し、
+[15の分野横断ケース](evals/cases.json)でスキルなし／ありを比較し、
 承認境界・証拠の正確性・スコープ違反の回帰を必須条件として評価します。
 
 [4環境での導入ガイド](docs/integrations.md)で、Codex・Claude Code・Claude Chat・ChatGPT Chatの手順と制限を整理しています。ChatGPTでネイティブスキルが利用できない場合のための[プロジェクト指示テンプレート](adapters/chatgpt-project-instructions.md)も用意しました。

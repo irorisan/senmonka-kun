@@ -7,7 +7,8 @@ ROOT = Path(__file__).resolve().parents[1]
 SKILL_DIR = ROOT / "skills" / "senmonka-kun"
 SKILL = SKILL_DIR / "SKILL.md"
 REFERENCES = {
-    "engineering", "design", "ux", "marketing", "business", "security", "validation"
+    "engineering", "design", "ux", "marketing", "business", "security",
+    "documentation", "mechanical-engineering", "manufacturing-engineering", "validation"
 }
 MANDATORY_RULE = (
     "既存の仕様・決定事項は制約として扱い、より良い代替案を発見した場合は、"
@@ -54,6 +55,9 @@ class SkillPackageTest(unittest.TestCase):
             "README.md", "README.ja.md", "LICENSE", "tests/scenarios.md",
             "examples/code-review.md", "examples/design-review.md",
             "examples/ux-review.md", "examples/marketing-analysis.md",
+            "examples/documentation-creation.md",
+            "examples/mechanical-engineering-review.md",
+            "examples/manufacturing-engineering-review.md",
         ):
             self.assertTrue((ROOT / filename).is_file(), filename)
 

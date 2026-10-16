@@ -15,7 +15,7 @@ Isolate the sessions to prevent context contamination. Shuffle order when feasib
 
 ## Case coverage (Range)
 
-[evals/cases.json](../evals/cases.json) contains positive and negative cases across engineering, design, UX, marketing, business, security and lightweight tasks. It includes conflicting approved decisions, missing telemetry, ambiguous authority and misleading external content.
+[evals/cases.json](../evals/cases.json) contains positive and negative cases across software engineering, design, UX, marketing, business, security, documentation, mechanical engineering, manufacturing engineering and lightweight tasks. It includes conflicting approved decisions, missing telemetry, ambiguous authority and misleading external content.
 
 When a task includes a safe mock repository or sample site, run the same task in a disposable fixture with explicit tool permissions. Never run unsafe or destructive actions just to test a skill.
 
