@@ -14,3 +14,5 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate skill packaging and rules
         run: python3 -m unittest discover -s tests -v
+      - name: Build portable skill archive
+        run: python3 tools/package_skill.py --output /tmp/senmonka-kun-ci.zip
